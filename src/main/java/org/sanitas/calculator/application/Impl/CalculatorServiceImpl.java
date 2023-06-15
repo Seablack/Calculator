@@ -1,18 +1,22 @@
 package org.sanitas.calculator.application.Impl;
 
 
+
 import io.corp.calculator.TracerImpl;
 import org.sanitas.calculator.domain.CalculatorService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class CalculatorServiceImpl implements CalculatorService {
 
-    private TracerImpl tracer;
+    private final TracerImpl tracer;
 
-    public CalculatorServiceImpl (TracerImpl tracer){
+    @Autowired
+    public CalculatorServiceImpl(TracerImpl tracer) {
         this.tracer = tracer;
     }
+
     @Override
     public double add(double a, double b) {
         double result = a + b;
