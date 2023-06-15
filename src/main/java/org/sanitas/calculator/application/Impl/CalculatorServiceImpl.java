@@ -1,4 +1,4 @@
-package org.sanitas.calculator.application;
+package org.sanitas.calculator.application.Impl;
 
 import org.sanitas.calculator.domain.CalculatorService;
 import org.springframework.stereotype.Service;

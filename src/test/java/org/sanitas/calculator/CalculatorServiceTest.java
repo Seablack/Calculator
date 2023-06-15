@@ -1,7 +1,7 @@
 package org.sanitas.calculator;
 
 import org.junit.jupiter.api.Test;
-import org.sanitas.calculator.application.CalculatorServiceImpl;
+import org.sanitas.calculator.application.Impl.CalculatorServiceImpl;
 import org.sanitas.calculator.domain.CalculatorService;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.TestConstructor;

@@ -1,6 +1,6 @@
-package org.sanitas.calculator.application;
+package org.sanitas.calculator.infrastructure;
 
-import org.sanitas.calculator.domain.CalculatorController;
+import org.sanitas.calculator.application.CalculatorController;
 import org.sanitas.calculator.domain.CalculatorService;
 import org.springframework.web.bind.annotation.RestController;
 
