@@ -1,5 +1,6 @@
 package org.sanitas.calculator;
 
+
 import io.corp.calculator.TracerImpl;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
