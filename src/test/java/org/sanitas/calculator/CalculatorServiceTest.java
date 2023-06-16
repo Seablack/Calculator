@@ -21,6 +21,14 @@ public class CalculatorServiceTest {
         this.calculatorService = calculatorService;
     }
 
+    @TestConfiguration
+    public static class TestConfig {
+
+        @Bean
+        public TracerImpl tracer() {
+            return new TracerImpl();
+        }
+    }
     @Test
     public void add_ShouldReturnCorrectSum_TwoNumbers(){
         assertEquals(3.4, calculatorService.add(2.2,1.2), 0.001);
@@ -31,14 +39,7 @@ public class CalculatorServiceTest {
         assertEquals(-0.5, calculatorService.subtract(2.7,3.2), 0.001);
     }
 
-    @TestConfiguration
-    public static class TestConfig {
 
-        @Bean
-        public TracerImpl tracer() {
-            return new TracerImpl();
-        }
-    }
 
 
 
