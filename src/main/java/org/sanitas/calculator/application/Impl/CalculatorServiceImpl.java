@@ -20,14 +20,22 @@ public class CalculatorServiceImpl implements CalculatorService {
     @Override
     public double add(double a, double b) {
         double result = a + b;
-        tracer.trace(result);
+        comprobarResultInfinito(result);
         return result;
+    }
+
+    private void comprobarResultInfinito(double result) {
+        if (Double.isInfinite(result)) {
+            tracer.trace("El resultado es infinito.");
+        } else {
+            tracer.trace(result);
+        }
     }
 
     @Override
     public double subtract(double a, double b) {
         double result = a - b;
-        tracer.trace(result);
+        comprobarResultInfinito(result);
         return result;
     }
 }
